@@ -3,8 +3,22 @@ import 'package:flutter/material.dart';
 
 class AppTextStyles {
   // Large primary text, normal weight
+  static const TextStyle bodyMedium = TextStyle(
+    color: AppColors.primaryText,
+    fontSize: 14,
+    fontWeight: FontWeight.normal,
+  );
+
+  // Large primary text, normal weight
   static const TextStyle bodyLarge = TextStyle(
     color: AppColors.primaryText,
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+  );
+
+  // Large muted text, normal weight
+  static const TextStyle bodyMediumMuted = TextStyle(
+    color: AppColors.mutedText,
     fontSize: 14,
     fontWeight: FontWeight.normal,
   );
@@ -12,21 +26,21 @@ class AppTextStyles {
   // Large muted text, normal weight
   static const TextStyle bodyLargeMuted = TextStyle(
     color: AppColors.mutedText,
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: FontWeight.normal,
   );
 
   // Small primary text, normal weight
   static const TextStyle bodySmall = TextStyle(
     color: AppColors.primaryText,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: FontWeight.normal,
   );
 
   // Extra small muted text, normal weight
   static const TextStyle bodyExtraSmallMuted = TextStyle(
     color: AppColors.mutedText,
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: FontWeight.normal,
   );
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class KeyboardIcon extends StatelessWidget {
-  const KeyboardIcon({super.key, this.size = 32});
+  const KeyboardIcon({super.key, this.size = 28.0});
 
   final double size;
 

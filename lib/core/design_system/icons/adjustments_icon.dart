@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AdjustmentsIcon extends StatelessWidget {
-  const AdjustmentsIcon({super.key, this.size = 32});
+  const AdjustmentsIcon({super.key, this.size = 28});
 
   final double size;
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MicOnIcon extends StatelessWidget {
-  const MicOnIcon({super.key, this.size = 32, this.color = Colors.black});
+  const MicOnIcon({super.key, this.size = 28.0, this.color = Colors.black});
 
   final double size;
   final Color color;

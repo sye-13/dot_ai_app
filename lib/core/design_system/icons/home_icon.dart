@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeIcon extends StatelessWidget {
-  const HomeIcon({super.key, this.size = 32});
+  const HomeIcon({super.key, this.size = 28.0});
 
   final double size;
 

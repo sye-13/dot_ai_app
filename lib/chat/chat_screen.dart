@@ -1,4 +1,13 @@
+import 'package:dot_ai_app/chat/data/test_data.dart';
+import 'package:dot_ai_app/chat/model/chat_entry.dart';
+import 'package:dot_ai_app/core/design_system/app_colors.dart';
+import 'package:dot_ai_app/core/design_system/app_theme.dart';
 import 'package:dot_ai_app/core/design_system/buttons/control_button.dart';
+import 'package:dot_ai_app/core/design_system/components/ai_chat_bubble.dart';
+import 'package:dot_ai_app/core/design_system/components/ai_processing_widget.dart';
+import 'package:dot_ai_app/core/design_system/components/custom_app_bar.dart';
+import 'package:dot_ai_app/core/design_system/components/dot_ai_widget.dart';
+import 'package:dot_ai_app/core/design_system/components/user_chat_bubble.dart';
 import 'package:dot_ai_app/core/design_system/icons/adjustments_icon.dart';
 import 'package:dot_ai_app/core/design_system/icons/home_icon.dart';
 import 'package:dot_ai_app/core/design_system/icons/keyboard_icon.dart';
@@ -21,11 +30,51 @@ class ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: const HomeIcon()),
-        actions: [IconButton(onPressed: () {}, icon: const AdjustmentsIcon())],
+      appBar: CustomAppBar(
+        title: const DotAIWidget(),
+        leftIcon: IconButton(onPressed: () {}, icon: const HomeIcon()),
+        rightIcon: IconButton(onPressed: () {}, icon: const AdjustmentsIcon()),
       ),
-      body: const Placeholder(),
+      body: Container(
+        decoration: BoxDecoration(gradient: AppTheme.backgroundGradient),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: ListView.separated(
+            padding: const EdgeInsets.only(top: 20.0),
+            itemCount: entries.length,
+            separatorBuilder: (BuildContext context, int index) {
+              return const SizedBox(height: 24.0);
+            },
+            itemBuilder: (BuildContext context, int index) {
+              final entry = entries[index];
+              switch (entry) {
+                case UserChatEntry():
+                  return Align(
+                    alignment: Alignment.centerRight,
+                    child: UserChatBubble(
+                      message: entry.message,
+                      textAlign: TextAlign.right,
+                    ),
+                  );
+                case AIChatMessage():
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: AIChatBubble(
+                      message: entry.message,
+                      textAlign: TextAlign.left,
+                      quickActions: entry.quickActions,
+                    ),
+                  );
+                case AIProcessingEntry():
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: AIProcessingWidget(tasks: entry.tasks),
+                  );
+              }
+            },
+          ),
+        ),
+      ),
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),

@@ -20,6 +20,7 @@ class AppTheme {
     ),
 
     textTheme: TextTheme(
+      bodyMedium: AppTextStyles.bodyMedium,
       bodyLarge: AppTextStyles.bodyLarge,
       bodySmall: AppTextStyles.bodyExtraSmallMuted,
     ),
