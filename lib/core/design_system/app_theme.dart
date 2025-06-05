@@ -64,4 +64,11 @@ class AppTheme {
     ],
     stops: [0.0, 0.5, 1.0],
   );
+
+  static LinearGradient primaryMicGradient = const LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: AppColors.micButtonGradientColors,
+    stops: [0.0, 0.75, 1.0],
+  );
 }

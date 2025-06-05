@@ -76,21 +76,24 @@ class ChatView extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              ControlButton(onPressed: () {}, child: const MicOffIcon()),
-              ControlButton(
-                onPressed: () {},
-                padding: 20.0,
-                color: AppColors.accentGreen,
-                child: const MicOnIcon(color: AppColors.surface),
-              ),
-              ControlButton(onPressed: () {}, child: const KeyboardIcon()),
-            ],
+        child: ColoredBox(
+          color: AppColors.gradientEnd,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ControlButton(onPressed: () {}, child: const MicOffIcon()),
+                ControlButton(
+                  onPressed: () {},
+                  padding: 16.0,
+                  gradient: AppTheme.primaryMicGradient,
+                  child: const MicOnIcon(color: AppColors.surface),
+                ),
+                ControlButton(onPressed: () {}, child: const KeyboardIcon()),
+              ],
+            ),
           ),
         ),
       ),

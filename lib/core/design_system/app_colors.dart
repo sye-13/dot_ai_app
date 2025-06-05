@@ -19,9 +19,9 @@ class AppColors {
 
   // Gradients
   static const List<Color> backgroundGradientColors = [
-    Color(0xFFFFFFFF), // White
-    Color(0xFFFAFAF8), // Near-white
-    Color(0xFFF5F5F5), // Light gray
+    Color(0xFFFFFFFF),
+    Color(0xFFFAFAF8),
+    Color(0xFFF5F5F5),
   ];
 
   static const Color gradientStart = Color(0xFFFFFFFF);
@@ -32,5 +32,11 @@ class AppColors {
   static const List<Color> dotAIGradientColors = [
     Color(0xFF26C675),
     Color(0xFF0A4254),
+  ];
+
+  static const List<Color> micButtonGradientColors = [
+    Color(0xFF2CDB73),
+    Color(0xFF278665),
+    Color(0xFF136460),
   ];
 }

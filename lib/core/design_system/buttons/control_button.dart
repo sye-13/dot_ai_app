@@ -1,18 +1,20 @@
-import 'package:dot_ai_app/core/design_system/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:dot_ai_app/core/design_system/app_colors.dart';
 
 class ControlButton extends StatelessWidget {
   const ControlButton({
     super.key,
     required this.child,
     this.padding = 10.0,
-    this.color = AppColors.surface,
+    this.color,
+    this.gradient,
     this.onPressed,
   });
 
   final Widget child;
   final double padding;
   final Color? color;
+  final Gradient? gradient;
   final VoidCallback? onPressed;
 
   @override
@@ -21,11 +23,18 @@ class ControlButton extends StatelessWidget {
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
         shape: CircleBorder(),
-        backgroundColor: color,
+        backgroundColor: color ?? Colors.transparent,
         side: BorderSide.none,
-        padding: EdgeInsets.all(padding),
       ),
-      child: child,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          gradient:
+              gradient ?? LinearGradient(colors: [Colors.white, Colors.white]),
+          color: color ?? AppColors.surface,
+          borderRadius: BorderRadius.circular(36),
+        ),
+        child: Padding(padding: EdgeInsets.all(padding), child: child),
+      ),
     );
   }
 }
