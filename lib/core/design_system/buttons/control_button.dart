@@ -1,3 +1,4 @@
+import 'package:dot_ai_app/core/design_system/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ControlButton extends StatelessWidget {
@@ -5,7 +6,7 @@ class ControlButton extends StatelessWidget {
     super.key,
     required this.child,
     this.padding = 10.0,
-    this.color = Colors.white,
+    this.color = AppColors.surface,
     this.onPressed,
   });
 

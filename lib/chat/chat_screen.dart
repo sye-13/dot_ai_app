@@ -37,8 +37,8 @@ class ChatView extends StatelessWidget {
               ControlButton(
                 onPressed: () {},
                 padding: 20.0,
-                color: Colors.green,
-                child: const MicOnIcon(color: Colors.white),
+                color: AppColors.accentGreen,
+                child: const MicOnIcon(color: AppColors.surface),
               ),
               ControlButton(onPressed: () {}, child: const KeyboardIcon()),
             ],
