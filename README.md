@@ -77,5 +77,5 @@ This command compiles and launches the app on the connected device or emulator.
 ## 🎬 Demo
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/demo.gif?raw=true" width="400" height="300" alt="App demo"/>
+  <img src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/demo.gif?raw=true" width="45%" alt="App demo"/>
 </div>
