@@ -76,4 +76,4 @@ This command compiles and launches the app on the connected device or emulator.
 
 ## 🎬 Demo
 
-![App Demo](screenshots/demo.mov)
+![App Demo](https://github.com/sye-13/dot_ai_app/blob/main/screenshots/demo.gif?raw=true)
