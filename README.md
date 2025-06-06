@@ -17,16 +17,18 @@ primary goal is to demonstrate:
 - **Custom animations** and transitions
 - **Minimalistic design system** tailored for the chat experience
 
-![Main Chat Interface - Voice mode](screenshots/voice-mode.png)
-![Main Chat Interface - Text mode](screenshots/text-mode.png)
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/sye-13/dot-ai-app/blob/main/screenshots/voice-mode.png?raw=true" width="45%" alt="chat screen with voice mode"/>
+  <img src="https://github.com/sye-13/dot-ai-app/blob/main/screenshots/text-mode.png?raw=true" width="45%" alt="chat screen with text mode"/>
+</div>
 
 ---
 
 ## ⚙️ Features
 
 - **Dual Input Modes**: Toggle between voice and text input panels.
-- **Dynamic TextField**: In text mode, the input field supports up to 5 lines. The voice input
-  toggle disappears when the TextField is focused.
+- **Dynamic TextField**: In text mode, the input field supports up to 5 visible lines. The voice input
+  toggle disappears when the text input is focused.
 - **Rich Text Rendering**: AI messages support Markdown formatting.
 - **Simulated AI Responses**: Predefined AI responses to simulate conversation flow.
 - **Minimal Design System**: Basic components like buttons, typography, and color schemes.
