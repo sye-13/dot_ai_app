@@ -1,16 +1,77 @@
-# dot_ai_app
+# Dot AI - Flutter Chat UI Prototype
 
-A new Flutter project.
+This repository showcases a **Flutter-based chat interface** designed to simulate user interactions
+with an AI assistant. The focus is on **UI/UX design and input handling**, rather than implementing
+a fully functional AI backend.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🎯 Project Overview
 
-A few resources to get you started if this is your first Flutter project:
+This project serves as a **UI prototype** inspired by an existing AI chat application. It aims to
+replicate the look and feel of the original app's interface, without access to its design files. The
+primary goal is to demonstrate:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Interactive chat interface** with voice and text input modes
+- **Rich text rendering** for AI responses
+- **Custom animations** and transitions
+- **Minimalistic design system** tailored for the chat experience
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Main Chat Interface - Voice mode](screenshots/voice-mode.png)
+![Main Chat Interface - Text mode](screenshots/text-mode.png)
+
+---
+
+## ⚙️ Features
+
+- **Dual Input Modes**: Toggle between voice and text input panels.
+- **Dynamic TextField**: In text mode, the input field supports up to 5 lines. The voice input
+  toggle disappears when the TextField is focused.
+- **Rich Text Rendering**: AI messages support Markdown formatting.
+- **Simulated AI Responses**: Predefined AI responses to simulate conversation flow.
+- **Minimal Design System**: Basic components like buttons, typography, and color schemes.
+- **Typing Animation**: AI responses appear letter by letter, mimicking typing.
+- **Custom Icons**: All icons are from [tabler.io](tabler.io/icons) and bundled within the app. A package is also available on [pub.dev](https://pub.dev/packages/flutter_tabler_icons).
+
+---
+
+## 🛠️ Technology Stack
+
+- **Flutter**: Framework for building natively compiled applications.
+- **Dart**: Programming language used for Flutter development.
+- **Minimal External Packages**: To keep the project lightweight and focused on core
+  functionalities.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Flutter](https://flutter.dev/docs/get-started/install) installed on your machine.
+- A compatible IDE (e.g., Visual Studio Code, Android Studio).
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/sye-13/dot_ai_app.git
+cd dot_ai_app
+```
+
+## 🚀 Running the App
+
+```bash
+flutter pub get
+```
+
+Execute the following command to run the app:
+
+```bash
+flutter run
+```
+
+This command compiles and launches the app on the connected device or emulator.
+
+## 🎬 Demo
+
+![App Demo](screenshots/demo.mov)
