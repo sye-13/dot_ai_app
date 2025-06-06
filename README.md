@@ -76,7 +76,6 @@ This command compiles and launches the app on the connected device or emulator.
 
 ## 🎬 Demo
 
-<video controls style="width: 45%; height: auto;">
-  <source src="https://github.com/username/repo/blob/main/screenshots/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/demo.gif?raw=true" width="45%" alt="App demo"/>
+</div>
