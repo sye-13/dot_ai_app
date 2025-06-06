@@ -29,7 +29,8 @@ class ControlButton extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           gradient:
-              gradient ?? LinearGradient(colors: [Colors.white, Colors.white]),
+              gradient ??
+              LinearGradient(colors: [AppColors.surface, AppColors.surface]),
           color: color ?? AppColors.surface,
           borderRadius: BorderRadius.circular(36),
         ),

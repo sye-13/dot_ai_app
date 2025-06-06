@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget title;
-  final Widget leftIcon;
-  final Widget rightIcon;
+  final Widget startIcon;
+  final Widget endIcon;
   final double height;
 
   const CustomAppBar({
     super.key,
     required this.title,
-    required this.leftIcon,
-    required this.rightIcon,
+    required this.startIcon,
+    required this.endIcon,
     this.height = 100.0,
   });
 
@@ -27,12 +27,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Padding(padding: const EdgeInsets.only(left: 20.0), child: leftIcon),
+          Padding(padding: const EdgeInsets.only(left: 20.0), child: startIcon),
           Expanded(child: Center(child: title)),
-          Padding(
-            padding: const EdgeInsets.only(right: 20.0),
-            child: rightIcon,
-          ),
+          Padding(padding: const EdgeInsets.only(right: 20.0), child: endIcon),
         ],
       ),
     );

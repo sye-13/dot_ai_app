@@ -1,4 +1,4 @@
-import 'package:dot_ai_app/chat/chat_screen.dart';
+import 'package:dot_ai_app/chat/presentation/chat_screen.dart';
 import 'package:dot_ai_app/core/design_system/app_theme.dart';
 import 'package:flutter/material.dart';
 
