@@ -1,23 +1,24 @@
-import 'package:dot_ai_app/chat/model/quick_action.dart';
+import 'package:dot_ai_app/chat/model/chat_entry.dart';
 import 'package:dot_ai_app/core/design_system/app_colors.dart';
 import 'package:dot_ai_app/core/design_system/app_text_styles.dart';
 import 'package:dot_ai_app/core/design_system/components/animated_dot_ai_widget.dart';
 import 'package:dot_ai_app/core/design_system/components/chat_bubble_border.dart';
+import 'package:dot_ai_app/core/design_system/components/typing_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 class AIChatBubble extends StatelessWidget {
-  final String message;
+  final AIChatMessage aiChatEntry;
   final TextAlign textAlign;
-  final List<QuickAction> quickActions;
   final bool displayLabel;
+  final bool animate;
 
   const AIChatBubble({
     super.key,
-    required this.message,
+    required this.aiChatEntry,
     required this.textAlign,
-    required this.quickActions,
     this.displayLabel = true,
+    this.animate = false,
   });
 
   @override
@@ -27,14 +28,16 @@ class AIChatBubble extends StatelessWidget {
       children: [
         ChatBubbleBorder(
           backgroundColor: AppColors.bubbleAI,
-          child: MarkdownBody(data: message),
+          child:
+              animate
+                  ? TypingText(fullText: aiChatEntry.message)
+                  : MarkdownBody(data: aiChatEntry.message),
         ),
         if (displayLabel) ...{
           const SizedBox(height: 2.0),
-          const AnimatedDotAIWidget(),
+          AnimatedDotAIWidget(animate: animate),
         },
-        if (quickActions.isNotEmpty) ...[
-          const SizedBox(height: 12.0),
+        if (aiChatEntry.quickActions.isNotEmpty) ...[
           Text(
             'Suggestions',
             textAlign: textAlign,
@@ -45,7 +48,7 @@ class AIChatBubble extends StatelessWidget {
             spacing: 96.0,
             runSpacing: 8.0,
             children:
-                quickActions
+                aiChatEntry.quickActions
                     .map(
                       (qa) => ChatBubbleBorder(
                         backgroundColor: AppColors.chipBackground,
