@@ -18,8 +18,8 @@ primary goal is to demonstrate:
 - **Minimalistic design system** tailored for the chat experience
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/sye-13/dot-ai-app/blob/main/screenshots/voice-mode.png?raw=true" width="45%" alt="chat screen with voice mode"/>
-  <img src="https://github.com/sye-13/dot-ai-app/blob/main/screenshots/text-mode.png?raw=true" width="45%" alt="chat screen with text mode"/>
+  <img src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/voice-mode.png?raw=true" width="45%" alt="chat screen with voice mode"/>
+  <img src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/text-mode.png?raw=true" width="45%" alt="chat screen with text mode"/>
 </div>
 
 ---
