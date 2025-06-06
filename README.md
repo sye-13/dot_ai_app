@@ -60,7 +60,7 @@ git clone https://github.com/sye-13/dot_ai_app.git
 cd dot_ai_app
 ```
 
-## 🚀 Running the App
+## 📲 Running the App
 
 ```bash
 flutter pub get
@@ -76,6 +76,7 @@ This command compiles and launches the app on the connected device or emulator.
 
 ## 🎬 Demo
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/demo.gif?raw=true" width="45%" alt="App demo"/>
-</div>
+<video controls style="width: 45%; height: auto;">
+  <source src="https://github.com/sye-13/dot_ai_app/blob/main/screenshots/demo.mp4?raw=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
